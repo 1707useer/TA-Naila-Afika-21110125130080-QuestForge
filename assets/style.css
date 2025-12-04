@@ -1,0 +1,299 @@
+/* ==========================================
+   Arcane Mage Theme — Midnight Blue + Violet
+   ========================================== */
+
+* { box-sizing: border-box; }
+
+@font-face {
+  font-family: "RuneFont";
+  src: url("runes.ttf");
+}
+
+/* BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+
+  /* Arcane fog + stars */
+  background: #121426 url('assets/texture-arcane.png') repeat;
+  color: #e9e4ff;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #1f2150, #3b2d73);
+  color: #e9ddff;
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0f1136;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+  font-family: RuneFont, serif;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #8d77ff;
+}
+
+/* NAV */
+.header nav a {
+  color: #e5d9ff;
+  text-decoration: none;
+  margin-left: 22px;
+  font-weight: bold;
+  transition: 0.25s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.header nav a:hover {
+  color: #c7afff;
+  text-shadow: 0 0 8px #9f84ff;
+  border-bottom: 2px solid #b08bff;
+}
+
+.header nav a.active {
+  color: #d7c6ff;
+  border-bottom: 2px solid #b497ff;
+}
+
+/* WRAPPER */
+.wrapper {
+  max-width: 1200px;
+  margin: 18px auto;
+  padding: 0 16px;
+}
+
+/* STATUS BAR */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 10px;
+  background: rgba(40, 38, 70, 0.35);
+  border-radius: 8px;
+  border: 1px solid #534599;
+  backdrop-filter: blur(5px);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 20px;
+}
+
+
+.right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* THE ARCANE CARD STYLE */
+.card {
+  background: rgba(31, 29, 58, 0.7);
+  border: 1px solid #5e4bc4;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(110, 82, 255, 0.18);
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
+  transition: 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 0 22px rgba(145, 115, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* QUEST LIST */
+.quest-list { list-style: none; margin: 0; padding: 0; }
+
+.quest-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #4c3d89;
+}
+
+.quest-title {
+  font-weight: 700;
+  color: #e6ddff;
+}
+
+.quest-meta {
+  font-size: 12px;
+  color: #b6a7e8;
+}
+
+/* BUTTONS */
+.button {
+  background: #3a2d75;
+  border: 2px solid #261d54;
+  color: #eaddff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: 0.2s;
+  text-shadow: 0 0 6px #9d84ff;
+}
+
+.button:hover {
+  background: #4e3d9d;
+  transform: scale(1.04);
+}
+
+.button.alt {
+  background: #5a2e3f;
+  border: 2px solid #391d28;
+  color: #ffd8e8;
+  text-shadow: none;
+}
+
+.button.alt:hover {
+  background: #78384f;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  color: #e9ddff;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #4f3f90;
+  background: rgba(20, 18, 40, 0.4);
+}
+
+/* WEEKLY BAR */
+.week-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.week-label {
+  width: 60px;
+  font-weight: 700;
+  color: #d1c8ff;
+}
+
+.week-bar {
+  flex: 1;
+  height: 14px;
+  background: #2b274a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.week-fill {
+  height: 100%;
+  background: #9e7bff;
+  transition: width 0.35s;
+}
+
+/* MESSAGE BOX */
+.msg {
+  background: #221f3f;
+  border: 1px solid #5c48b8;
+  padding: 10px;
+  margin-top: 14px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* SESSION LOG BOX */
+.session-log {
+  background: rgba(0, 148, 253, 0.85);
+  border: 1px solid #5948a7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 26px;
+}
+
+/* SECTION SPACING */
+.section {
+  margin-bottom: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: 1fr; }
+  .right-stack { order: 2; }
+}
+
+/* Username + Level Layout */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+/* Left Username Block */
+.user-info {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-setname input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+/* Right Level + EXP Bar */
+.level-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 45%;
+}
+
+.level-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* EXP Bar */
+.xpbar {
+  flex: 1;
+  height: 16px;
+  background: #b29b76;
+  border-radius: 10px;
+  border: 2px solid #5e4bc4;
+  overflow: hidden;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.xpfill {
+  height: 100%;
+  background: linear-gradient(90deg, #7d4aff, #c299ff);
+  transition: width 0.4s ease-in-out;
+}
+
+.xp-num {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
