@@ -1,12 +1,5 @@
 [
     {
-        "id": 1,
-        "title": "english",
-        "difficulty": "easy",
-        "reward": 10,
-        "status": "completed"
-    },
-    {
         "id": 2,
         "title": "TA",
         "difficulty": "hard",
@@ -18,11 +11,11 @@
         "title": "makalah kimia",
         "difficulty": "easy",
         "reward": 10,
-        "status": "pending"
+        "status": "completed"
     },
     {
-        "id": 4,
-        "title": "TA lagi",
+        "id": 6,
+        "title": "tugas akhir",
         "difficulty": "hard",
         "reward": 40,
         "status": "pending"

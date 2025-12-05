@@ -32,7 +32,6 @@ body {
   text-shadow: 0 0 8px #8d77ff;
 }
 
-/* NAV */
 .header nav a {
   color: #e5d9ff;
   text-decoration: none;
@@ -162,33 +161,6 @@ body {
   background: rgba(20, 18, 40, 0.4);
 }
 
-.week-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.week-label {
-  width: 60px;
-  font-weight: 700;
-  color: #d1c8ff;
-}
-
-.week-bar {
-  flex: 1;
-  height: 14px;
-  background: #2b274a;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.week-fill {
-  height: 100%;
-  background: #9e7bff;
-  transition: width 0.35s;
-}
-
 .msg {
   background: #221f3f;
   border: 1px solid #5c48b8;
@@ -198,13 +170,6 @@ body {
   font-weight: 700;
 }
 
-.session-log {
-  background: rgba(0, 148, 253, 0.85);
-  border: 1px solid #5948a7;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 26px;
-}
 
 .section {
   margin-bottom: 30px;
@@ -273,3 +238,24 @@ body {
   font-weight: bold;
 }
 
+.quest-progress {
+  width: 140px;
+  height: 8px;
+  background: #4a3e88;
+  border-radius: 6px;
+  margin-top: 6px;
+  overflow: hidden;
+  border: 1px solid #7b68d4;
+}
+
+.quest-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6e4eff, #c299ff);
+  transition: width 0.3s ease;
+}
+
+.quest-progress-text {
+  font-size: 11px;
+  margin-top: 4px;
+  color: #cabfff;
+}
